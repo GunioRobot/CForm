@@ -15,10 +15,10 @@ Example usage:
 
 	// Create Combobox. First param is caption, second is name,
 	// third is array where is listed values and their captions.
-	$frm->addCombobox( 'City: ', 'city', 
-		array( 'tre' => 'Tampere', 
-			   'jkl' => 'Jyväskylä', 
-			   'shr' => '_Suhmura', 
+	$frm->addCombobox( 'City: ', 'city',
+		array( 'tre' => 'Tampere',
+			   'jkl' => 'Jyväskylä',
+			   'shr' => '_Suhmura',
 			   'ktk' => 'Kotka' ) );
 
 	// Create submit-button.

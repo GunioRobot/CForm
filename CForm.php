@@ -1,6 +1,6 @@
 <?php
 
-/* 
+/*
 CForm. Basic HTML Form creator.
 Copyright (C) 2010, 2011 Aleksi Räsänen <aleksi.rasanen@runosydan.net>
 
@@ -30,7 +30,7 @@ error_reporting( E_ALL );
 // **************************************************
 class CForm
 {
-	//! Here we save our form 
+	//! Here we save our form
 	private $form = '';
 
 	//! Goes to form action-field
@@ -101,7 +101,7 @@ class CForm
 		return $out;
 	}
 
-	// ************************************************** 
+	// **************************************************
 	//  addFileButton
 	/*!
 		@brief Add File selection button to form
@@ -109,7 +109,7 @@ class CForm
 		@param $name HTML element name
 		@param $id Unique HTML element ID
 	*/
-	// ************************************************** 
+	// **************************************************
 	public function addFileButton( $caption, $name, $id='' )
 	{
 		$this->form_items[] = array(
@@ -178,7 +178,7 @@ class CForm
 		if( $id == '' )
 			$id = $name . '_id';
 
-		$this->form_items[] = array( 
+		$this->form_items[] = array(
 			'type' => 'option',
 			'caption' => $caption,
 			'name' => $name,
@@ -274,8 +274,8 @@ class CForm
 		$this->form .= '</form>';
 		$this->form .= "\n";
 		$this->form .= '<script type="text/javascript">' . "\n";
-		$this->form .= 'document.forms["' . $this->form_name 
-			. '"].elements["' . $this->form_items[0]['name'] 
+		$this->form .= 'document.forms["' . $this->form_name
+			. '"].elements["' . $this->form_items[0]['name']
 			. '"].focus();';
 		$this->form .= '</script>' . "\n";
 
@@ -334,14 +334,14 @@ class CForm
 			. 'value="' . $items['value'] . '">';
 	}
 
-	// ************************************************** 
+	// **************************************************
 	//  file_to_html
 	/*!
 		@brief Creates a file selector to HTML String
 		@param $items Item informations array
 		@return HTML String
 	*/
-	// ************************************************** 
+	// **************************************************
 	private function file_to_html( $items )
 	{
 		return '<input type="file" name="' . $items['name'] . '" '
@@ -429,7 +429,7 @@ class CForm
 				case 'submit':
 					$ret = $this->submit_to_html( $fi[$i] );
 					break;
-				
+
 				case 'file':
 					$ret = $this->file_to_html( $fi[$i] );
 					break;
